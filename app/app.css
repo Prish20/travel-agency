@@ -470,10 +470,20 @@
 }
 
 html,
-body {
-  font-family: "Figtree", sans-serif;
-  background-color: #f9fbfc;
-  scroll-behavior: smooth;
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+html.light {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .glassmorphism {
@@ -535,6 +545,12 @@ body {
   padding-left: 36px;
   padding-right: 36px;
 }
+/* .e-sidebar,
+.e-sidebar *,
+.e-sidebar.e-left,
+.e-sidebar.e-left * {
+  border-radius: 0 !important;
+} */
 /* e-input-group-icon e-ddl-icon e-search-icon */
 
 .e-input-group-icon {
