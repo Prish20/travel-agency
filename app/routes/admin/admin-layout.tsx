@@ -1,5 +1,6 @@
 import { SidebarComponent } from "@syncfusion/ej2-react-navigations";
-import { Sidebar, SidebarBody, SidebarLink, SidebarLogo, SidebarLogoIcon } from "components/sidebar";
+import { Sidebar, SidebarBody, SidebarLink, SidebarLogo, SidebarLogoIcon } from "components";
+
 import { getAdminSidebarLinks } from "lib/constants/sidebarLinks";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
