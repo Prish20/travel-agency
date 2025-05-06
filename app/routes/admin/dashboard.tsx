@@ -1,7 +1,7 @@
 import StatsCard from 'components/dashboard/StatsCard'
 import Header from 'components/Header'
 import TripCard from 'components/trip/TripCard'
-import React from 'react'
+import { allTrips } from '~/constants'
 
 const dashboard = () => {
     const user = {
@@ -56,7 +56,15 @@ const dashboard = () => {
                     />
                 </div>
             </section>
-            <TripCard />
+            <section className="flex flex-col gap-6">
+                <h3 className="text-xl font-semibold text-dark-100">Created Trips</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 w-full">
+                    {allTrips.slice(0, 4).map((trip) => (
+                        <TripCard key={trip.id} {...trip} />
+                    ))}
+                </div>
+
+            </section>
         </main>
     )
 }

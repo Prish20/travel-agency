@@ -11,7 +11,7 @@ const StatsCard = ({
         currentMonthCount, lastMonthCount)
     const isDecrement = trend === "decrement"
     return (
-        <article className="stats-card bg-black-700">
+        <article className="stats-card">
             <h3 className="text-base font-medium">{headerTitle}</h3>
             <div className="content">
                 <div className="flex flex-col gap-4">
