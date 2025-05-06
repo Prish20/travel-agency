@@ -7,6 +7,12 @@ import { Outlet } from "react-router-dom";
 const AdminLayout = () => {
     const [open, setOpen] = useState(false);
 
+    const user = {
+        name: "Adrian Sanya",
+        email: "contact@christadriansanya.me",
+        image: "/assets/images/david.webp",
+    }
+
     const handleLogout = () => {
         console.log("Logging out...");
     };
@@ -35,11 +41,11 @@ const AdminLayout = () => {
                             <div>
                                 <SidebarLink
                                     link={{
-                                        label: "contact@christadriansanya.me",
+                                        label: user.name,
                                         href: "#",
                                         icon: (
                                             <img
-                                                src="https://assets.aceternity.com/manu.png"
+                                                src={user.image}
                                                 className="h-7 w-7 flex-shrink-0 rounded-full"
                                                 width={50}
                                                 height={50}
@@ -47,12 +53,13 @@ const AdminLayout = () => {
                                             />
                                         ),
                                     }}
+                                    text={user.email}
                                 />
                             </div>
                         </SidebarBody>
                     </Sidebar>
 
-                    <main className="flex-1 w-full overflow-auto bg-neutral-900 m-6">
+                    <main className="flex-1 w-full overflow-auto bg-neutral-900 mt-6">
                         <Outlet />
                     </main>
                 </div>

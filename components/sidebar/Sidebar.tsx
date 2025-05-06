@@ -155,10 +155,12 @@ export const MobileSidebar = ({
 
 export const SidebarLink = ({
     link,
+    text,
     className,
     ...props
 }: {
     link: Links;
+    text?: string;
     className?: string;
     props?: LinkProps;
 }) => {
@@ -176,7 +178,7 @@ export const SidebarLink = ({
                 }
             }}
             className={cn(
-                "flex items-center justify-start gap-2 group/sidebar py-2",
+                "flex items-center justify-start gap-4 group/sidebar py-2",
                 isActive && "text-primary-500 font-semibold",
                 className
             )}
@@ -190,7 +192,14 @@ export const SidebarLink = ({
                 }}
                 className="text-neutral-700 dark:text-neutral-200 text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0"
             >
-                {link.label}
+                <article className="flex flex-col">
+                    <span className="text-sm font-medium text-neutral-900 dark:text-white">
+                        {link.label}
+                    </span>
+                    <span className="text-xs font-normal text-neutral-500 dark:text-neutral-400">
+                        {text}
+                    </span>
+                </article>
             </motion.span>
         </Link>
     );
