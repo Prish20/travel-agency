@@ -18,7 +18,7 @@ export const getAdminSidebarLinks = (handleLogout: () => void) => [
         icon: <UsersRoundIcon className="h-5 w-5" />,
     },
     {
-        label: "All Trips",
+        label: "AI Trips",
         href: "/trips",
         icon: <BusFront className="h-5 w-5" />,
     },

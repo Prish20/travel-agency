@@ -14,7 +14,7 @@ export const SidebarLogo = () => {
                 animate={{ opacity: 1 }}
                 className="font-medium text-black dark:text-white whitespace-pre"
             >
-                <span className="text-white font-bold">TourDrive</span>
+                <span className="text-gray-950 font-bold">TourDrive</span>
             </motion.span>
         </Link>
     );

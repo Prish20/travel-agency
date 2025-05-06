@@ -2,10 +2,10 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "lib/utils";
-import { Menu, X } from "lucide-react";
+import { ArrowLeftFromLine, Menu, X } from "lucide-react";
 import React, { createContext, useContext, useState } from "react";
 import type { LinkProps } from "react-router-dom";
-import { Link, useLocation } from "react-router-dom"; // ✅ Added useLocation
+import { Link, useLocation } from "react-router-dom";
 
 interface Links {
     label: string;
@@ -88,11 +88,11 @@ export const DesktopSidebar = ({
     return (
         <motion.div
             className={cn(
-                "h-full px-4 py-4 hidden md:flex md:flex-col bg-neutral-100 dark:bg-neutral-800 w-[300px] flex-shrink-0",
+                "h-full px-4 py-4 hidden md:flex md:flex-col flex-shrink-0",
                 className
             )}
             animate={{
-                width: animate ? (open ? "300px" : "60px") : "300px",
+                width: animate ? (open ? "250px" : "60px") : "300px",
             }}
             onMouseEnter={() => setOpen(true)}
             onMouseLeave={() => setOpen(false)}
@@ -113,13 +113,13 @@ export const MobileSidebar = ({
         <>
             <div
                 className={cn(
-                    "h-10 px-4 py-4 flex flex-row md:hidden items-center bg-neutral-100 dark:bg-neutral-800 w-full"
+                    "h-10 px-4 py-4 flex flex-row md:hidden items-center w-full"
                 )}
                 {...props}
             >
                 <div className="flex justify-start z-20 w-full">
                     <Menu
-                        className="text-neutral-800 dark:text-neutral-200 cursor-pointer"
+                        className="text-neutral-800 cursor-pointer"
                         onClick={() => setOpen(!open)}
                     />
                 </div>
@@ -134,15 +134,15 @@ export const MobileSidebar = ({
                                 ease: "easeInOut",
                             }}
                             className={cn(
-                                "fixed h-full w-full inset-0 bg-white dark:bg-neutral-900 p-10 z-[100] flex flex-col justify-between",
+                                "fixed h-full w-full inset-0 bg-white p-10 z-[100] flex flex-col justify-between",
                                 className
                             )}
                         >
                             <div
-                                className="absolute right-10 top-10 z-50 text-neutral-800 dark:text-neutral-200 cursor-pointer"
+                                className="absolute right-10 top-10 z-50 text-black cursor-pointer"
                                 onClick={() => setOpen(!open)}
                             >
-                                <X />
+                                <ArrowLeftFromLine />
                             </div>
                             {children}
                         </motion.div>
@@ -179,7 +179,7 @@ export const SidebarLink = ({
             }}
             className={cn(
                 "flex items-center justify-start gap-4 group/sidebar py-2",
-                isActive && "text-primary-500 font-semibold",
+                isActive && "text-[#256FF1] font-semibold",
                 className
             )}
             {...props}
@@ -190,10 +190,10 @@ export const SidebarLink = ({
                     display: animate ? (open ? "inline-block" : "none") : "inline-block",
                     opacity: animate ? (open ? 1 : 0) : 1,
                 }}
-                className="text-neutral-700 dark:text-neutral-200 text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0"
+                className="text-gray dark:text-neutral-200 text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0"
             >
                 <article className="flex flex-col">
-                    <span className="text-sm font-medium text-neutral-900 dark:text-white">
+                    <span className="text-sm font-medium text-black">
                         {link.label}
                     </span>
                     <span className="text-xs font-normal text-neutral-500 dark:text-neutral-400">

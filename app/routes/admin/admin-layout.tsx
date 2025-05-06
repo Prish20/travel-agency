@@ -21,19 +21,19 @@ const AdminLayout = () => {
     const links = getAdminSidebarLinks(handleLogout);
 
     return (
-        <div className="w-screen h-screen overflow-hidden bg-neutral-900">
+        <div className="w-screen h-screen overflow-hidden ">
             <SidebarComponent
                 width="100vw"
                 height="100vh"
                 enableGestures={false}
                 className="!rounded-none !border-none !p-0"
             >
-                <div className="w-full h-full flex flex-col md:flex-row overflow-hidden bg-neutral-900">
+                <div className="w-full h-full flex flex-col md:flex-row overflow-hidden">
                     <Sidebar open={open} setOpen={setOpen}>
-                        <SidebarBody className="justify-between gap-10">
+                        <SidebarBody className="justify-between gap-10 border-white/10 border-r-8">
                             <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
                                 {open ? <SidebarLogo /> : <SidebarLogoIcon />}
-                                <div className="mt-8 flex flex-col gap-2">
+                                <div className="mt-8 flex flex-col gap-2 text-black">
                                     {links.map((link, idx) => (
                                         <SidebarLink key={idx} link={link} />
                                     ))}
@@ -60,7 +60,7 @@ const AdminLayout = () => {
                         </SidebarBody>
                     </Sidebar>
 
-                    <main className="flex-1 w-full overflow-auto bg-neutral-900 mt-6">
+                    <main className="flex-1 w-full overflow-auto mt-6">
                         <Outlet />
                     </main>
                 </div>

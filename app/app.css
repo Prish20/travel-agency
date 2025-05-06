@@ -472,12 +472,14 @@
 html,
 body,
 #root {
+  background-color: black;
+  color: white;
   margin: 0;
   padding: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #0a0a0a;
-  color: #ffffff;
+  /* background-color: #0a0a0a; */
+  /* color: #ffffff; */
   overflow: hidden;
 }
 
