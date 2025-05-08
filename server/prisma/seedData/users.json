@@ -1,0 +1,26 @@
+[
+    {
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "imageUrl": "/assets/images/david.webp",
+        "dateJoined": "2025-01-01T00:00:00.000Z",
+        "itineraryCreated": 10,
+        "status": "user"
+    },
+    {
+        "name": "Jane Smith",
+        "email": "jane.smith@example.com",
+        "imageUrl": "/assets/images/david.webp",
+        "dateJoined": "2025-01-02T00:00:00.000Z",
+        "itineraryCreated": 4,
+        "status": "user"
+    },
+    {
+        "name": "John Smith",
+        "email": "john.smith@example.com",
+        "imageUrl": "/assets/images/david.webp",
+        "dateJoined": "2025-01-03T00:00:00.000Z",
+        "itineraryCreated": 8,
+        "status": "admin"
+    }
+]

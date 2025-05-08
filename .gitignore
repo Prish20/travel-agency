@@ -7,4 +7,7 @@
 /client/build/
 
 /client/.env.local
-/server
+/server/prisma/generated
+/server/.env
+/server/prisma/migrations
+/server/dist

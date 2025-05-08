@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": {
+      "@generated/*": ["prisma/generated/*"]
+    }
+  },
+  "include": [
+    "src/**/*",
+    "src/data/**/*.json",
+    "prisma/**/*",
+    "dist/prisma"
+  ]
+}
